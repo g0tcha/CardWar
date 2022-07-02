@@ -13,6 +13,10 @@ class PlayableDeck: Deck {
         super.init()
     }
     
+    var isEmpty: Bool {
+        cards.isEmpty
+    }
+    
     func popCard() -> Card? {
         cards.popLast()
     }
