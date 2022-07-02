@@ -15,7 +15,7 @@ final class Dealer {
         deck = MainDeck()
     }
     
-    func prepareShuffledDeck() {
+    func shuffleDeck() {
         deck.shuffle()
     }
     

@@ -10,11 +10,11 @@ import Foundation
 class PlayableDeck: Deck {
     
     override init(cards: [Card]) {
-        super.init()
+        super.init(cards: cards)
     }
     
-    var isEmpty: Bool {
-        cards.isEmpty
+    var hasCards: Bool {
+        !cards.isEmpty
     }
     
     func popCard() -> Card? {

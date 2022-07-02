@@ -9,23 +9,22 @@ import Foundation
 
 class Player {
     
-    private var deck: [Card] = []
+    private var deck: PlayableDeck?
     
     init() {}
     
-    func popCard() -> Card? {
-        deck.popLast()
+    func setDeck(_ deck: PlayableDeck) {
+        self.deck = deck
     }
     
-    func appendCards(cards: [Card]) {
-        deck.append(contentsOf: cards)
+    func playCard() -> Card? {
+        deck?.popCard()
     }
     
-    func hasCards() -> Bool {
-        !deck.isEmpty
-    }
-    
-    func displayDeckCount() {
-        print("\(deck.count) cards in the deck\n")
+    var getRemainingCardsCountMessage: String {
+        guard let deck = deck else {
+            return "This player has no deck."
+        }
+        return "\(deck.count) cards remaining."
     }
 }
