@@ -122,9 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				D2AA5B1E2870A0E80056E006 /* Info.plist */,
-				D2AA5B102870A0E70056E006 /* AppDelegate.swift */,
-				D2AA5B122870A0E70056E006 /* SceneDelegate.swift */,
-				D2AA5B142870A0E70056E006 /* ViewController.swift */,
+				D2AA5B5D2870FF780056E006 /* Application */,
+				D2AA5B5C2870FF6D0056E006 /* Controller */,
 				D2AA5B572870C1570056E006 /* Core */,
 				D2AA5B452870A4790056E006 /* Extensions */,
 				D2AA5B402870A3120056E006 /* Model */,
@@ -198,6 +197,23 @@
 				D2AA5B582870C1650056E006 /* Variable.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		D2AA5B5C2870FF6D0056E006 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA5B142870A0E70056E006 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D2AA5B5D2870FF780056E006 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA5B102870A0E70056E006 /* AppDelegate.swift */,
+				D2AA5B122870A0E70056E006 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
