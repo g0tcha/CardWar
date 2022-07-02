@@ -26,6 +26,7 @@
 		D2AA5B542870B6F70056E006 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5B532870B6F70056E006 /* UIView+Extensions.swift */; };
 		D2AA5B562870BCBA0056E006 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5B552870BCBA0056E006 /* UIViewController+Extensions.swift */; };
 		D2AA5B592870C1650056E006 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5B582870C1650056E006 /* Variable.swift */; };
+		D2AA5B5B2870FED30056E006 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA5B5A2870FED30056E006 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D2AA5B532870B6F70056E006 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D2AA5B552870BCBA0056E006 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D2AA5B582870C1650056E006 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		D2AA5B5A2870FED30056E006 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,11 +155,12 @@
 			isa = PBXGroup;
 			children = (
 				D2AA5B432870A3ED0056E006 /* Card.swift */,
+				D2AA5B512870AE4C0056E006 /* Dealer.swift */,
+				D2AA5B5A2870FED30056E006 /* Deck.swift */,
 				D2AA5B4F2870AE020056E006 /* Game.swift */,
 				D2AA5B492870A4C70056E006 /* MainDeck.swift */,
 				D2AA5B4D2870A56D0056E006 /* PlayableDeck.swift */,
 				D2AA5B4B2870A55E0056E006 /* Player.swift */,
-				D2AA5B512870AE4C0056E006 /* Dealer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AA5B5B2870FED30056E006 /* Deck.swift in Sources */,
 				D2AA5B152870A0E70056E006 /* ViewController.swift in Sources */,
 				D2AA5B502870AE020056E006 /* Game.swift in Sources */,
 				D2AA5B4A2870A4C70056E006 /* MainDeck.swift in Sources */,

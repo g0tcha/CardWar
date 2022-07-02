@@ -7,21 +7,6 @@
 
 import Foundation
 
-class Deck {
-    
-    var cards: [Card] = []
-    
-    var count: Int {
-        cards.count
-    }
-    
-    init() {}
-    
-    init(cards: [Card]) {
-        self.cards = cards
-    }
-}
-
 final class MainDeck: Deck {
     
     override init() {
