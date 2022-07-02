@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,10 +61,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayg-vt-CEb">
-                                <rect key="frame" x="20" y="266" width="68" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="68" id="Rqz-qy-Bg5"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="266" width="63" height="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Count"/>
@@ -82,16 +78,15 @@
                                     <action selector="handleCountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUn-aE-V4O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFd-8S-JNg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFd-8S-JNg">
                                 <rect key="frame" x="20" y="799" width="374" height="63"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="cXl-0N-F2N"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="⚔️ Play Card ⚔️">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="handlePlayCardTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lqt-q0-izY"/>
@@ -110,7 +105,9 @@
                             <constraint firstItem="PsZ-fe-PyN" firstAttribute="top" secondItem="Ayg-vt-CEb" secondAttribute="bottom" constant="8" symbolic="YES" id="KRW-n4-omm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsZ-fe-PyN" secondAttribute="trailing" constant="20" id="Qka-lh-rbY"/>
                             <constraint firstItem="LFd-8S-JNg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xrw-IS-do5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ayg-vt-CEb" secondAttribute="trailing" symbolic="YES" id="YtA-e6-Ymb"/>
                             <constraint firstItem="PsZ-fe-PyN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZmT-JE-IqM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S5m-0r-2AI" secondAttribute="trailing" symbolic="YES" id="bJz-c0-gmV"/>
                             <constraint firstItem="PsZ-fe-PyN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jVr-HX-paf"/>
                             <constraint firstItem="pxX-fn-f8p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nIb-bt-zLQ"/>
                             <constraint firstItem="LFd-8S-JNg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tSQ-zp-qKo"/>
@@ -118,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="informationLabel" destination="Z5M-EA-3zA" id="BME-5o-U9D"/>
+                        <outlet property="playButton" destination="LFd-8S-JNg" id="hPB-Xx-7DC"/>
                         <outlet property="player1CountButton" destination="S5m-0r-2AI" id="YFN-VY-uZw"/>
                         <outlet property="player2CountButton" destination="Ayg-vt-CEb" id="ZXO-YN-gWk"/>
                     </connections>
@@ -127,9 +125,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

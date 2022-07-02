@@ -21,7 +21,7 @@ class PlayableDeck: Deck {
         cards.popLast()
     }
     
-    func appendCards(_ cardsToAppend: [Card]) {
-        cards.append(contentsOf: cardsToAppend)
+    func insertCards(_ cardsToInsert: [Card]) {
+        cards.insert(contentsOf: cardsToInsert.shuffled(), at: 0)
     }
 }

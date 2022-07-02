@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Player {
+final class Player {
     
     private var deck: PlayableDeck?
     
@@ -19,6 +19,14 @@ class Player {
     
     func playCard() -> Card? {
         deck?.popCard()
+    }
+    
+    func hasCard() -> Bool {
+        deck?.hasCards ?? false
+    }
+    
+    func insertCardsToDeck(cards: [Card]) {
+        deck?.insertCards(cards)
     }
     
     var getRemainingCardsCountMessage: String {

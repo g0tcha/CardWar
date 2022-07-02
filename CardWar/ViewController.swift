@@ -7,10 +7,23 @@
 
 import UIKit
 
+enum PlayButtonState: CustomStringConvertible {
+    case playCard, playAgain
+    
+    var description: String {
+        switch self {
+        case .playCard: return "⚔️ Play card ⚔️"
+        case .playAgain: return "Play again"
+        }
+    }
+}
+
 class ViewController: UIViewController {
     
     private let game = Game()
+    private var playButtonState: PlayButtonState = .playCard
     
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var player1CountButton: UIButton!
     @IBOutlet weak var player2CountButton: UIButton!
     @IBOutlet weak var informationLabel: UILabel!
@@ -24,7 +37,7 @@ class ViewController: UIViewController {
             self?.handleGameState(state)
         }
         
-        game.start()
+        startGame()
     }
     
     // MARK: - Actions
@@ -35,7 +48,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func handlePlayCardTapped(_ sender: UIButton) {
-        game.play()
+        if case .playAgain = playButtonState {
+            startGame()
+            playButtonState = .playCard
+        } else {
+            game.play()
+        }
     }
 }
 
@@ -43,16 +61,17 @@ class ViewController: UIViewController {
 
 private extension ViewController {
     
+    func startGame() {
+        game.start()
+        playButton.setTitle("⚔️ Play card ⚔️", for: .normal)
+    }
+    
     func handleGameState(_ state: GameState) {
-        switch state {
-        case .ended(let winner):
-            informationLabel.text = "Game ended, winner is \(winner)."
-        case .notStarted:
-            informationLabel.text = "You can start by hitting the BIG red button at the bottom of the screen."
-        case .playing(let player1Card, let player2Card):
-            informationLabel.text = "\(player1Card.description)\nVS.\n\(player2Card.description)"
-        case .waitingForPlay:
-            informationLabel.text = "Hey, you should play a card..."
+        self.informationLabel.text = state.text
+        
+        if case .ended = state {
+            playButton.setTitle("Play again", for: .normal)
+            playButtonState = .playAgain
         }
     }
 }
